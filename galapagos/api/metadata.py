@@ -1,6 +1,5 @@
 from galapagos.api import __galapagos__
 
-
 class PopulationMetadata:
     def __init__(self):
         self._handle = __galapagos__.create_population_metadata()
