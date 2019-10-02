@@ -4,7 +4,51 @@ import os
 loader = windll if os.system == 'win32' else cdll
 __galapagos__ = loader.LoadLibrary(r'C:\Users\kosie\github\Galapagos\Build\Debug\Galapagos.dll')
 
+#--------------------------
+#----Galapagos Session-----
+#--------------------------
+__galapagos__.create_population.restype = c_void_p
+__galapagos__.delete_population.argtypes = [c_void_p]
+
+#----------------------------
+#----Chromosome Metadata-----
+#----------------------------
+__galapagos__.create_chromosome_metadata.restype = c_void_p
+__galapagos__.delete_chromosome_metadata.argtypes = [c_void_p]
+
+__galapagos__.set_chromosome_metadata_name.argtypes = [c_void_p, c_char_p]
+__galapagos__.get_chromosome_metadata_name.restype = c_char_p
+__galapagos__.get_chromosome_metadata_name.argtypes = [c_void_p]
+
+__galapagos__.set_chromosome_metadata_crossover_rate.argtypes = [c_void_p, c_double]
+__galapagos__.get_chromosome_metadata_crossover_rate.restype = c_double
+__galapagos__.get_chromosome_metadata_crossover_rate.argtypes = [c_double]
+
+__galapagos__.set_chromosome_metadata_mutation_rate.argtypes = [c_void_p, c_double]
+__galapagos__.get_chromosome_metadata_mutation_rate.restype = c_double
+__galapagos__.get_chromosome_metadata_mutation_rate.argtypes = [c_void_p]
+
+__galapagos__.set_chromosome_metadata_num_crossovers.argtypes = [c_void_p, c_size_t]
+__galapagos__.get_chromosome_metadata_num_crossovers.restype = c_size_t
+__galapagos__.get_chromosome_metadata_num_crossovers.argtypes = [c_void_p]
+
+__galapagos__.set_chromosome_metadata_crossovers.argtypes = [c_void_p, c_void_p]
+__galapagos__.get_chromosome_metadata_crossovers.restype = c_void_p
+__galapagos__.get_chromosome_metadata_crossovers.argtypes = [c_void_p]
+
+__galapagos__.set_chromosome_metadata_num_mutations.argtypes = [c_void_p, c_size_t]
+__galapagos__.get_chromosome_metadata_num_mutations.restype = c_size_t
+__galapagos__.get_chromosome_metadata_num_mutations.argtypes = [c_void_p]
+
+__galapagos__.set_chromosome_metadata_mutations.argtypes = [c_void_p, c_void_p]
+__galapagos__.get_chromosome_metadata_mutations.restype = c_void_p
+__galapagos__.get_chromosome_metadata_mutations.argtypes = [c_void_p]
+
+#----------------------------
+#----Population Metadata-----
+#----------------------------
 __galapagos__.create_population_metadata.restype = c_void_p
+__galapagos__.delete_population_metadata.argtypes = [c_void_p]
 
 __galapagos__.set_population_metadata_size.argtypes = [c_void_p, c_longlong]
 __galapagos__.get_population_metadata_size.restype = c_longlong
