@@ -22,7 +22,7 @@ __galapagos__.get_chromosome_metadata_name.argtypes = [c_void_p]
 
 __galapagos__.set_chromosome_metadata_crossover_rate.argtypes = [c_void_p, c_double]
 __galapagos__.get_chromosome_metadata_crossover_rate.restype = c_double
-__galapagos__.get_chromosome_metadata_crossover_rate.argtypes = [c_double]
+__galapagos__.get_chromosome_metadata_crossover_rate.argtypes = [c_void_p]
 
 __galapagos__.set_chromosome_metadata_mutation_rate.argtypes = [c_void_p, c_double]
 __galapagos__.get_chromosome_metadata_mutation_rate.restype = c_double

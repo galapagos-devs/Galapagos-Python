@@ -1,12 +1,5 @@
-#try:
-#    from galapagos.api.metadata import PopulationMetadata
-#    from galapagos.api.metadata import TournamentSelectionMetadata
-#except ModuleNotFoundError:
-import sys
-sys.path.append('..')
 from galapagos.api.metadata import PopulationMetadata
 from galapagos.api.metadata import ChromosomeMetadata
-#sys.path.append('..')
 
 def population_metadata_test():
     population_metadata = PopulationMetadata()

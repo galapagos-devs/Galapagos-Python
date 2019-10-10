@@ -17,6 +17,14 @@ class ChromosomeMetadata:
     def name(self, value: str) -> None:
         __galapagos__.set_chromosome_metadata_name(self._handle, value.encode('utf-8'))
 
+    # crossover_rate
+    @property
+    def crossover_rate(self) -> float:
+        __galapagos__.get_chromosome_metadata_crossover_rate(self._handle)
+
+    @crossover_rate.setter
+    def crossover_rate()
+
 class PopulationMetadata:
     def __init__(self):
         self._handle = __galapagos__.create_population_metadata()
