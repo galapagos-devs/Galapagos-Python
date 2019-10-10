@@ -23,7 +23,8 @@ class ChromosomeMetadata:
         __galapagos__.get_chromosome_metadata_crossover_rate(self._handle)
 
     @crossover_rate.setter
-    def crossover_rate()
+    def crossover_rate(self, value: float) -> None:
+        __galapagos__.set_chromosome_metadata_crossover_rate(self._handle, value)
 
 class PopulationMetadata:
     def __init__(self):
